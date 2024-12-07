@@ -1,0 +1,69 @@
+---- Tarefa 1 ----
+(a) Você sabe como armazenar uma string na sua linguagem de programação favorita?
+Sim, em Python, é só atribui-la.
+Ex: teste = "Olá, mundo!"
+
+(b) Como ler um arquivo de texto linha por linha?
+Para ler um arquivo de texto em Python, pode usar o comando open com um loop for:
+with open("nome_do_arquivo.txt", "r") as arquivo:
+    for linha in arquivo:
+        print(linha.strip())
+
+(c) Como concatenar (combinar) duas strings em uma maior?
+string1 = "Olá"
+string2 = ", mundo!"
+string_concatenada = string1 + string2
+
+(d) Como verificar se uma linha começa com a string “.......” para parar a leitura?
+Pode usar o método .startswith(), exemplo:
+with open("nome_do_arquivo.txt", "r") as arquivo:
+    for linha in arquivo:
+        if linha.startswith("......."):
+            break
+
+
+---- Tarefa 2 ----
+(a) Como encontrar a primeira ocorrência de uma substring em uma string?
+Usando o método .find().
+
+(b) Como encontrar as próximas ocorrências de uma substring em uma string?
+Também dá para usar o .find() só que dentro de um loop.
+
+string = "Este é um exemplo de string com exemplo repetido."
+substring = "exemplo"
+
+inicio = 0
+while True:
+    indice = string.find(substring, inicio)
+    if indice == -1:  
+        break
+    print(f"Ocorrência encontrada no índice {indice}.")
+    inicio = indice + len(substring)
+
+
+---- Tarefa 3 ----
+Quantos dígitos, vogais ([aeiouAEIOU]) e consoantes (outros caracteres alfabéticos) existem em TTT?
+Dígitos: 4
+Vogais: 19
+Consoantes: 29
+
+
+---- Tarefa 4 ----
+(a) Como tokenizar uma string? 
+Para tokenizar, é só usar o método split(x), retornando uma lista de strings divididas em partes delimitadas pelo o x.
+
+(b) Como armazenar tokens em um array de strings?
+Colocando em uma lista.
+
+(c) Como ordenar lexicograficamente um array de strings?
+Usando o método sorted()
+
+
+---- Tarefa 5 ----
+Qual estrutura de dados você usaria para esta tarefa?
+Um dict.
+
+
+---- Tarefa 6 ----
+Como ler uma string com comprimento desconhecido?
+Usando um input.
